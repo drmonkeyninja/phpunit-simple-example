@@ -8,3 +8,18 @@ Please feel free to download this repository and give the unit tests a try.
 As mentioned in my blog post try adding a second test case for the `Average::median` method to test when an even set of numbers is passed to the method.
 
 If you succeed at that, then try taking a test driven development approach to adding a new method to `Average` for calculating the modal average by writing a test first.
+
+Getting Started
+---------------
+
+Clone this repository and then run Composer:-
+
+```
+composer install
+```
+
+You will then be able to run the unit tests using:-
+
+```
+./vendor/bin/phpunit
+```
