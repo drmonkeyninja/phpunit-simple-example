@@ -1,6 +1,6 @@
 #!/usr/bin/env groovy
 
-node('php') {
+node('master') {
 
     try{
         // stage('Get code from SCM') {
@@ -12,6 +12,10 @@ node('php') {
         //              userRemoteConfigs: [[url: '#your-git-link#']]]
         //     )
         // }
+        
+        stage('Checkout code') {
+            checkout scm
+        }
 
         stage('Composer Install') {
             sh 'composer install'
@@ -81,7 +85,7 @@ node('php') {
     } catch(error) {
         throw error;
     } finally {
-        
+
     }
 
 }
