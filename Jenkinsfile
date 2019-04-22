@@ -29,10 +29,6 @@ node('master') {
             sh 'vendor/phpunit/phpunit/phpunit --log-junit \'reports/unit-test-report.xml\''
         }
 
-        stage("Publish Unit Test Results") {
-            junit 'reports/*.xml'
-        }
-
         // stage("Publish Coverage") {
         //     publishHTML (target: [
         //             allowMissing: false,
@@ -89,7 +85,9 @@ node('master') {
     } catch(error) {
         throw error;
     } finally {
-
+        stage("Publish Unit Test Results") {
+            junit 'reports/*.xml'
+        }
     }
 
 }
