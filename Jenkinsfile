@@ -26,20 +26,24 @@ node('master') {
         // }
 
         stage("PHPUnit") {
-            sh 'vendor/phpunit/phpunit/phpunit --bootstrap build/bootstrap.php --configuration phpunit-coverage.xml'
+            sh 'vendor/phpunit/phpunit/phpunit --log-junit \'reports/unit-test-report.xml\''
         }
 
-        stage("Publish Coverage") {
-            publishHTML (target: [
-                    allowMissing: false,
-                    alwaysLinkToLastBuild: false,
-                    keepAll: true,
-                    reportDir: 'build/coverage',
-                    reportFiles: 'index.html',
-                    reportName: "Coverage Report"
-
-            ])
+        stage("Publish Unit Test Results") {
+            junit 'reports/*.xml'
         }
+
+        // stage("Publish Coverage") {
+        //     publishHTML (target: [
+        //             allowMissing: false,
+        //             alwaysLinkToLastBuild: false,
+        //             keepAll: true,
+        //             reportDir: 'build/coverage',
+        //             reportFiles: 'index.html',
+        //             reportName: "Coverage Report"
+
+        //     ])
+        // }
 
         // stage("Publish Clover") {
         //     step([$class: 'CloverPublisher', cloverReportDir: 'build/logs', cloverReportFileName: 'clover.xml'])
