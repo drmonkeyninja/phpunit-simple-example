@@ -23,4 +23,14 @@ class AverageTest extends TestCase
         $numbers = [3, 7, 6, 1, 5];
         $this->assertEquals(5, $this->Average->median($numbers));
     }
+
+    public function testWhatATest()
+    {
+        $this->assertTrue(1 === 1, "This should not fail");
+    }
+
+    public function testFailingTest() 
+    {
+        $this->assertTrue(1 === "1", "You got a failing test");
+    }
 }
