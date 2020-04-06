@@ -6,5 +6,8 @@
     	"psr-4": {
     		"drmonkeyninja\\": "src/"
     	}
+    },
+    "scripts": {
+        "test": "vendor/bin/phpunit"
     }
 }
