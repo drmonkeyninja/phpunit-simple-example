@@ -2,7 +2,7 @@ name: PHP Composer
 
 on:
   pull_request:
-    branches: [ master ]
+    types: [assigned, opened, synchronize, reopened]
 
 jobs:
   build:
