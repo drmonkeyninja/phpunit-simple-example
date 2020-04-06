@@ -1,7 +1,9 @@
 {
+    "name": "fondberg/phpactionstest",
+    "description": "Tests",
     "license": "MIT",
     "require-dev": {
-        "phpunit/phpunit": "^6.5"
+        "phpunit/phpunit": "^9.1"
     },
     "autoload": {
     	"psr-4": {
