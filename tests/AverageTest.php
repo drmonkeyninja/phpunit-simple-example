@@ -7,9 +7,8 @@ class AverageTest extends TestCase
 {
     protected $Average;
 
-    public function setUp()
+    public function setUp(): void
     {
-        parent::setUp();
         $this->Average = new Average();
     }
 
