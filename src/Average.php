@@ -25,11 +25,10 @@ class Average
         $size = count($numbers);
         if ($size % 2) {
             return $numbers[$size / 2];
-        } else {
-            return $this->mean(
+        }
+        return $this->mean(
                 array_slice($numbers, ($size / 2) - 1, 2)
             );
-        }
     }
     /**
      * Calculate the median average
