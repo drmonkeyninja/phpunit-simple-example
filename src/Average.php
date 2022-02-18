@@ -9,7 +9,7 @@ class Average
      * @param array $numbers Array of numbers
      * @return float Mean average
      */
-    public function mean(array $numbers)
+    public function mean(array $numbers): float
     {
         return array_sum($numbers) / count($numbers);
     }
@@ -19,7 +19,7 @@ class Average
      * @param array $numbers Array of numbers
      * @return float Median average
      */
-    public function median(array $numbers)
+    public function median(array $numbers): float
     {
         sort($numbers);
         $size = count($numbers);
@@ -30,5 +30,15 @@ class Average
                 array_slice($numbers, ($size / 2) - 1, 2)
             );
         }
+    }
+    /**
+     * Calculate the median average
+     * @param array $numbers Array of numbers
+     * @return float Median average
+     */
+    public function mode(array $numbers): int
+    {
+        $values = array_count_values($numbers);
+        return array_search(max($values), $values);
     }
 }
