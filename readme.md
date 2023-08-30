@@ -14,6 +14,11 @@ If you succeed at that, then try taking a test driven development approach to ad
 Getting Started
 ---------------
 
+To get a php environment on Ubuntu Linux 22.04 or later, install php-cli, php-xml and composer:-
+```
+sudo apt install php-cli php-xml composer
+```
+
 Clone this repository and then run Composer:-
 
 ```
