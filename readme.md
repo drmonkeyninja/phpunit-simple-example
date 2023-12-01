@@ -1,7 +1,9 @@
 A Simple PHPUnit Example
 ========================
 
-This is a simple example of unit testing in PHP with PHPUnit. I used these examples as part of a talk given at Sheffield PHP on the 18th January 2018. The talk has been written up as a blog post: [PHPUnit: What, Why, How?](https://andy-carter.com/blog/phpunit-what-why-how).
+This is a simple example of unit testing in PHP with PHPUnit. This version is forked from https://github.com/drmonkeyninja/phpunit-simple-example and updated for phpunit 10.3
+
+The original was created by Andy Carter and used as part of a talk given at Sheffield PHP on the 18th January 2018. The talk has been written up as a blog post: [PHPUnit: What, Why, How?](https://andy-carter.com/blog/phpunit-what-why-how).
 
 Please feel free to download this repository and give the unit tests a try.
 
@@ -11,6 +13,11 @@ If you succeed at that, then try taking a test driven development approach to ad
 
 Getting Started
 ---------------
+
+To get a php environment on Ubuntu Linux 22.04 or later, install php-cli, php-xml and composer:-
+```
+sudo apt install php-cli php-xml composer
+```
 
 Clone this repository and then run Composer:-
 
